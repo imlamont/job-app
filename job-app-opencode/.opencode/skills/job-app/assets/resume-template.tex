@@ -1,0 +1,42 @@
+% Single-column, ATS-parseable one-page resume.
+% Use only when the person has no existing resume source to edit.
+\documentclass[letterpaper,10pt]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{-0.6em}\rule{\linewidth}{0.4pt}]
+\titlespacing{\section}{0pt}{1.0em}{0.4em}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.1em,topsep=0.2em,parsep=0pt}
+\newcommand{\entry}[4]{\textbf{#1} \hfill #2 \\ \textit{#3} \hfill \textit{#4} \vspace{0.2em}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Full Name}}\\[0.3em]
+City, State $\cdot$ email@example.com $\cdot$ (555) 555-5555 $\cdot$ github.com/user $\cdot$ linkedin.com/in/user
+\end{center}
+
+\section{Education}
+\entry{University Name}{City, State}{B.S. in Field, GPA X.XX}{Expected May 20XX}
+\textit{Relevant coursework:} Course, Course, Course
+
+\section{Experience}
+\entry{Job Title}{Dates}{Company}{City, State}
+\begin{itemize}
+  \item Action verb, what was built, how, and the measured result
+  \item Second bullet
+\end{itemize}
+
+\section{Projects}
+\textbf{Project Name} \hfill \textit{Technologies} \\
+\begin{itemize}
+  \item What it does and what was technically interesting about it
+\end{itemize}
+
+\section{Skills}
+\textbf{Languages:} \quad \textbf{Frameworks:} \quad \textbf{Tools:}
+
+\end{document}

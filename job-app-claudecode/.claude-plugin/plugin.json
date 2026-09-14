@@ -1,0 +1,14 @@
+{
+  "name": "job-app",
+  "version": "1.0.0",
+  "description": "Tailor a resume to a job posting with delegated fact-checking and critique, plus cover letters, outreach, interview prep, and application tracking.",
+  "keywords": [
+    "resume",
+    "job-search",
+    "cover-letter",
+    "interview"
+  ],
+  "author": {
+    "name": "Ian Lamont"
+  }
+}

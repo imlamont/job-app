@@ -1,0 +1,16 @@
+{
+  "name": "imlamont-plugins",
+  "owner": {
+    "name": "Ian Lamont"
+  },
+  "description": "Plugins for job applications and resume work.",
+  "plugins": [
+    {
+      "name": "job-app",
+      "source": "./job-app-claudecode",
+      "description": "Tailor a resume to a job posting with delegated fact-checking and critique, plus cover letters, outreach, interview prep, and application tracking.",
+      "category": "Productivity",
+      "tags": ["resume", "job-search", "cover-letter", "interview"]
+    }
+  ]
+}
