@@ -17,6 +17,13 @@ See the [top-level README](../README.md) for the other variants and for maintena
 
 ## Install
 
+Get the `release` branch:
+
+```shell
+git clone -b release https://github.com/imlamont/job-app
+cd job-app
+```
+
 Into one project (merges with an existing `.opencode/`):
 
 ```shell

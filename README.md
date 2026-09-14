@@ -23,9 +23,13 @@ the same model checks its own draft, which is a weaker check but needs no setup.
 **Claude Code**
 
 ```shell
-/plugin marketplace add <owner>/<repo>     # or a local path to this repository
+/plugin marketplace add imlamont/job-app@release
 /plugin install job-app@imlamont-plugins
 ```
+
+This follows the `release` branch. Pull new releases with
+`/plugin marketplace update imlamont-plugins`. For local development, add the
+marketplace from a path to your checkout instead.
 
 Confirm with `/agents` that `resume-verifier`, `resume-critic`, and
 `job-researcher` are registered. The hook needs `python3` on PATH; without it
@@ -35,6 +39,8 @@ says so on stderr.
 **OpenCode**
 
 ```shell
+git clone -b release https://github.com/imlamont/job-app
+cd job-app
 cp -r job-app-opencode/.opencode /path/to/your/project/                # one project
 cp -r job-app-opencode/.opencode/{skills,agents,plugins} ~/.config/opencode/   # or globally
 ```

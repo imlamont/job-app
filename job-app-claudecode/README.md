@@ -19,9 +19,12 @@ See the [top-level README](../README.md) for the other variants and for maintena
 The marketplace lives at the repository root and points here.
 
 ```shell
-/plugin marketplace add <owner>/<repo>     # or a local path to the repository root
+/plugin marketplace add imlamont/job-app@release
 /plugin install job-app@imlamont-plugins
 ```
+
+This follows the `release` branch. Pull new releases with
+`/plugin marketplace update imlamont-plugins`.
 
 Confirm with `/agents` that `resume-verifier`, `resume-critic`, and
 `job-researcher` are registered.
