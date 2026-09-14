@@ -44,12 +44,12 @@ Check with `opencode debug skill`, `opencode debug agent resume-critic`, and
 
 **claude.ai**
 
-```shell
-scripts/build-skill.sh
-```
+Download [`job-app.skill`](https://github.com/imlamont/job-app/releases/download/job-app-skill/job-app.skill)
+and upload it under Settings → Capabilities → Skills. It is rebuilt from the
+`release` branch on every push.
 
-Upload `job-app-simple/job-app.skill` under Settings → Capabilities → Skills.
-The zip is a build artifact and is not committed.
+To build it yourself, run `scripts/build-skill.sh` and upload
+`job-app-simple/job-app.skill`. The zip is not committed.
 
 ## Workspace
 
@@ -116,7 +116,10 @@ BUN_BE_BUN=1 opencode run tests/opencode-plugin.ts    # OpenCode's embedded Bun;
 Each test suite checks both ways enforcement can fail: blocking the main
 session, and not enforcing for the three roles.
 
-**Releasing.** Bump `version` in `job-app-claudecode/.claude-plugin/plugin.json`.
+**Releasing.** Pushing to `release` runs `.github/workflows/build-skill.yml`,
+which builds the claude.ai zip (failing on shared-file drift), uploads it as a
+workflow artifact, and replaces the `job-app-skill` GitHub release with it.
+Bump `version` in `job-app-claudecode/.claude-plugin/plugin.json`.
 That is what decides whether existing Claude Code installs receive changes.
 Validate with `claude plugin validate .` and
 `claude plugin validate job-app-claudecode`. Validation checks structure, not
